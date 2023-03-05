@@ -7,6 +7,7 @@ final getIt = GetIt.instance;
 
 void setup() {
   getIt.registerSingleton<ProductNetworkProvider>(ProductNetworkProvider());
+
   getIt.registerSingleton<ProductRepository>(
       ProductRepository(getIt.get<ProductNetworkProvider>()));
 }
